@@ -1,0 +1,30 @@
+{
+  "name": "react-native-mybrowser",
+  "version": "1.0.1",
+  "description": "web browser module for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webview",
+    "webbrowser",
+    "browser",
+    "web",
+    "native",
+    "react",
+    "ios",
+    "android",
+    "react-native"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uraway/react-native-mybrowser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uraway/react-native-mybrowser/issues"
+  },
+  "homepage":   "https://github.com/uraway/react-native-mybrowser",
+  "author": "uraway",
+  "license": "MIT"
+}

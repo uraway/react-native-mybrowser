@@ -1,5 +1,6 @@
 'use strict';
 import React, {
+  Image,
   TextInput,
   TouchableOpacity,
   Text,
@@ -14,13 +15,21 @@ export default class AddressBar extends Component {
     super(props);
     this.inputText = '';
     this.state = {
-      url: this.props.url
+      url: this.props.url,
+      backButtonEnabled: this.props.backButtonEnabled,
+      forwardButtonEnabled: this.props.forwardButtonEnabled,
+      onBack: this.props.onBack,
+      onForward: this.props.onForward
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      url: nextProps.url
+      url: nextProps.url,
+      backButtonEnabled: nextProps.backButtonEnabled,
+      forwardButtonEnabled: nextProps.forwardButtonEnabled,
+      onBack: nextProps.onBack,
+      onForward: nextProps.onForward
     });
   }
 
@@ -52,10 +61,14 @@ export default class AddressBar extends Component {
       <View style={styles.addressBarRow}>
           <TouchableOpacity
             onPress={this.state.onBack}>
-              <Text
-                style={styles.button}>
-                {'←'}
-              </Text>
+            <Text
+              style={styles.button}>
+              {'<'}
+            </Text>
+            <Text
+              style={styles.button}>
+              {'>'}
+            </Text>
           </TouchableOpacity>
         <TextInput
           ref={TEXT_INPUT_REF}

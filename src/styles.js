@@ -11,7 +11,6 @@ const DISABLED_WASH = 'rgba(255,255,255,0.25)';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: HEADER,
   },
   header: {
     transform: [{'translate':[0,0,1]}], /* bring view to front */

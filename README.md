@@ -41,4 +41,4 @@ export default class ReactNativeMybrowserDemo extends Component {
 
 ## Sample
 
-![](./assets/images/ios.png)
+![](./assets/images/Simulator Screen Shot May 10, 2016, 12.26.03 AM.png)

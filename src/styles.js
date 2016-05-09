@@ -43,8 +43,9 @@ export default StyleSheet.create({
     fontSize: 14,
   },
   button: {
-    width:20,
-    height:20,
+    width:30,
+    height:30,
+    fontSize: 18,
     marginRight: ELEMENT_MARGIN,
     marginTop: 5,
     marginLeft: 3,

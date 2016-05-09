@@ -18,7 +18,7 @@ import React, {
   View
 } from 'react-native';
 
-import WebBrowser from './react-native-mybrowser/index';
+import WebBrowser from 'react-native-mybrowser';
 
 export default class ReactNativeMybrowserDemo extends Component {
     render() {

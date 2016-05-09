@@ -11,29 +11,33 @@ npm install react-native-mybrowser
 ## Usage
 
 ```javascript
+'use strict';
+
 import React, {
   Component,
   View
 } from 'react-native';
 
-import WebBrowser from 'react-native-mybrowser';
+import WebBrowser from './react-native-mybrowser/index';
 
-export default class SampleDemoApp extends Component {
-  render() {
-    return (
-      <WebBrowser
-        url='https://facebook.github.io/react-native'
-      />
-    );
-  }
+export default class ReactNativeMybrowserDemo extends Component {
+    render() {
+      return (
+        <WebBrowser
+          url='https://facebook.github.io/react-native'
+          backgroundColor='rgb(50, 180, 280)'
+        />
+      );
+    }
 }
 ```
 
 ## Required props
 
-|props        |description            |
-|---          |---                    |
-|url - string | web address           |
+|props          |description                              |
+|---            |---                                      |
+|url            |web address                              |
+|backgroundColor|background color of the header and footer|
 
 ## Sample
 

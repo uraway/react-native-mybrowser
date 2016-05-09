@@ -63,7 +63,7 @@ export default class WebBrowser extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container} backgroundColor={this.props.backgroundColor}>
         <View style={styles.header}>
           <AddressBar
             url={this.state.url}

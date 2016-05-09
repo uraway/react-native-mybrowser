@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const HEADER = 'rgb(234, 234, 234)';
+const HEADER = 'rgb(240, 240, 240)';
 const BGWASH = 'rgb(255, 255, 255)';
 const ELEMENT_MARGIN = 8;
 const SHADOW_COLOR = '#333';
@@ -48,6 +48,13 @@ export default StyleSheet.create({
     marginRight: ELEMENT_MARGIN,
     marginTop: 5,
     marginLeft: 3,
-    opacity: 0.9
+    opacity: 0.9,
+  },
+  toolBar: {
+    paddingTop:ELEMENT_MARGIN,
+    paddingBottom:ELEMENT_MARGIN,
+    height: 40,
+    flexDirection:'row',
+    justifyContent:'space-around',
   },
 });

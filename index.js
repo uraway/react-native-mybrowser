@@ -67,6 +67,7 @@ export default class WebBrowser extends Component {
         <View style={styles.header}>
           <AddressBar
             url={this.state.url}
+            title={this.state.title}
             onBack={this.goBack.bind(this)}
             backButtonEnabled={this.state.backButtonEnabled}
             forwardButtonEnabled={this.state.forwardButtonEnabled}

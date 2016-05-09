@@ -16,16 +16,19 @@ export default class AddressBar extends Component {
     this.inputText = '';
     this.state = {
       url: this.props.url,
+      title: this.props.title,
       backButtonEnabled: this.props.backButtonEnabled,
       forwardButtonEnabled: this.props.forwardButtonEnabled,
       onBack: this.props.onBack,
-      onForward: this.props.onForward
+      onForward: this.props.onForward,
+      editing: false,
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
       url: nextProps.url,
+      title: nextProps.title,
       backButtonEnabled: nextProps.backButtonEnabled,
       forwardButtonEnabled: nextProps.forwardButtonEnabled,
       onBack: nextProps.onBack,
@@ -43,6 +46,7 @@ export default class AddressBar extends Component {
 
   onSubmitEditing(event) {
     this.load();
+    this.setState({ editing: false });
   }
 
   load() {
@@ -59,21 +63,11 @@ export default class AddressBar extends Component {
   render() {
     return (
       <View style={styles.addressBarRow}>
-          <TouchableOpacity
-            onPress={this.state.onBack}>
-            <Text
-              style={styles.button}>
-              {'<'}
-            </Text>
-            <Text
-              style={styles.button}>
-              {'>'}
-            </Text>
-          </TouchableOpacity>
         <TextInput
           ref={TEXT_INPUT_REF}
           autoCapitalize="none"
-          defaultValue={this.state.url}
+          defaultValue={this.state.editing ? this.state.url : this.state.title}
+          onFocus={() => this.setState({ editing: true })}
           onSubmitEditing={this.onSubmitEditing.bind(this)}
           onChange={this.handleTextInputChange.bind(this)}
           clearButtonMode="while-editing"

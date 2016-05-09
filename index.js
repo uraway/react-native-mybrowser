@@ -3,10 +3,13 @@
 import React, {
   Component,
   View,
-  WebView
+  WebView,
+  Navigator,
 } from 'react-native';
 
 import AddressBar from './src/AddressBar';
+import ToolBar from './src/ToolBar';
+
 import styles from './src/styles';
 
 const WEBVIEW_REF = 'webview';
@@ -82,6 +85,15 @@ export default class WebBrowser extends Component {
           startInLoadingState={true}
           decelerationRate="normal"
           onNavigationStateChange={this.onNavigationStateChange.bind(this)}
+        />
+        <ToolBar
+          url={this.state.url}
+          onBack={this.goBack.bind(this)}
+          backButtonEnabled={this.state.backButtonEnabled}
+          forwardButtonEnabled={this.state.forwardButtonEnabled}
+          onForward={this.goForward.bind(this)}
+          onReload={this.reload.bind(this)}
+          onLoad={(url)=>{this.load(url)}}
         />
       </View>
     );
